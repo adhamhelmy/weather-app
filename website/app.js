@@ -7,7 +7,7 @@ const api = '17cfcd372447fbdd2d633f86a110024a&units=metric';
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + 1 +'.'+ d.getDate()+'.'+ d.getFullYear();
-let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
+let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
 
 
 
