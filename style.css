@@ -1,3 +1,47 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .stateOn{
+    background-color: black;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+/*
 body{
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -6,7 +50,7 @@ body{
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
+
     height:100vh;
     background: #000000;
     color: #f0d43a;
@@ -16,9 +60,7 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-/* .holder{
 
-} */
 
 .entry{
     display:block;
@@ -54,7 +96,7 @@ body{
 
 } 
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
+
 label{
     display:block;
     font-size: 27px;
@@ -91,27 +133,27 @@ textarea{
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
-/* Reset style for HTML element on active to have no border*/
+
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
 }
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
+
+::placeholder { /* Firefox, Chrome, Opera 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+:-ms-input-placeholder { /* Internet Explorer 10-11 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
-::-ms-input-placeholder { /* Microsoft Edge */ 
+::-ms-input-placeholder { /* Microsoft Edge 
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 

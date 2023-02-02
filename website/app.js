@@ -12,10 +12,10 @@ let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
 
 
 document.getElementById('generate').addEventListener('click', ()=>{
-    let zipcode = document.getElementById('zip').value;
+    let zipcode = document.getElementById('zipcode').value;
     getWeather(baseURL,zipcode,api)
       .then((data) => {
-      postData('/postData',{currentDate: newDate, temper: data.main.temp, contentOfFeelings: document.getElementById('feelings').value});
+      postData('/postData',{currentDate: newDate, temper: data.main.temp, contentOfFeelings: document.getElementById('feeling').value});
       }).then(() => {
       updateUI();
       });
@@ -47,12 +47,15 @@ const postData = async (url,data)=>{
 const updateUI = async () => {
 
   const request = await fetch('getData');
-  try {
-  const allData = await request.json();
-  document.getElementById('date').innerHTML = allData.currentDate;
-  document.getElementById('temp').innerHTML = allData.temper;
-  document.getElementById('content').innerHTML = allData.contentOfFeelings;
-  } catch (error) {
-  console.log("error", error);
+  try 
+  {
+    const allData = await request.json();
+    document.getElementById('date').innerHTML = "Date: " + allData.currentDate;
+    document.getElementById('temp').innerHTML = "Temprature: " + allData.temper;
+    document.getElementById('content').innerHTML = "Feelings: " + allData.contentOfFeelings;
+  } 
+  catch (error) 
+  {
+    console.log("error", error);
   }
 }
