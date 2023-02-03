@@ -3,7 +3,8 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "findup-sync": "^5.0.0"
   },
   "scripts": {
     "start": "node server.js"
