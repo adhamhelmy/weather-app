@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // // Cors for cross origin allowance
 app.use(cors());
 // // Initialize the main project folder
-app.use(express.static('website'));
+app.use(express.static('index.html'));
 
 
 // // Setup Server
@@ -43,12 +43,9 @@ const dataa = new Dataa()
 
 app.post('/postData',(req,res) =>{
   dataa.setData(req.body)
-  console.log(req.body);
   res.send(projectData);
 })
-console.log(projectData);
 app.get('/getData', (req, res) => {
-  console.log(dataa.getData())
   projectData = dataa.getData();
   res.send(projectData);
 })

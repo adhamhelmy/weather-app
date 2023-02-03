@@ -25,7 +25,6 @@ const getWeather = async (url,zip,api)=>{
     const res = await fetch(url + zip +',us&appid='+ api)
     try {
       const data = await res.json();
-      console.log(data);
       return data;
     }  catch(error) {
       console.log("error", error);
@@ -34,7 +33,6 @@ const getWeather = async (url,zip,api)=>{
     
 }
 const postData = async (url,data)=>{
-  console.log(data)
   const res2 = await fetch ('/postData', {
     method: "post",
     headers: {
